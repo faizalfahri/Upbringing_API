@@ -43,7 +43,7 @@ export const Login = async(req, res) => {
         const name = user[0].name; 
         const email = user[0].email;
         const accessToken = jwt.sign({userId, name, email}, process.env.ACCESS_TOKEN_SECRET, {
-            expiresIn: '30s'
+            expiresIn: '60s'
         }); 
         const refreshToken = jwt.sign({userId, name, email}, process.env.REFRESH_TOKEN_SECRET, {
             expiresIn: '1d'
@@ -53,10 +53,7 @@ export const Login = async(req, res) => {
                 id : userId
             } 
         });
-        res.cookie('refreshToken', refreshToken, {
-            httpOnly: true,
-            maxAge: 24 * 60 * 60 * 1000
-        });
+        res.cookie('refreshToken', refreshToken);
         res.json({ accessToken });
     } catch (error) {
         res.status(404).json({ msg: "Email Tidak Terdaftar" });

@@ -1,7 +1,7 @@
 GET http://localhost:5000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOiJKYWxza2kiLCJlbWFpbCI6ImVtYWlsQGdtYWlsLmNvbSIsImlhdCI6MTY5MDk0NzY4NiwiZXhwIjoxNjkwOTQ3NzAxfQ.m4cxyx1AcJNyD1yvTRKSmVkWCdxaixSNC7YiZAlvGKY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsIm5hbWUiOiJKYWxza2kiLCJlbWFpbCI6ImVtYWlsQGdtYWlsLmNvbSIsImlhdCI6MTY5MTM4MzIyOCwiZXhwIjoxNjkxMzgzMjQzfQ.0pNtXsnpAR5D6z8WKeUczKNPbHZJSPt4q77dgelOVQI
 ###
-POST http://localhost:5000/users
+POST http://localhost:5000/register
 Content-Type: application/json
 
 {
