@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize('auth_db','root','',{
+const db = new Sequelize('upbringing_api','ziaq','nolepngoding',{
     host: "localhost",
     dialect: "mysql"
 });
